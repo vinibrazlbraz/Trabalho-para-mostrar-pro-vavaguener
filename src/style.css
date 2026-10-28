@@ -1,0 +1,139 @@
+/* CSS propositalmente horrível. A funcionalidade continua normal. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  color: #120024;
+  background: repeating-linear-gradient(45deg, #fff700 0 18px, #ff69b4 18px 36px, #00ffff 36px 54px);
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+a { color: inherit; text-decoration: none; }
+header {
+  background: #ff00ff;
+  color: #001eff;
+  padding: 16px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 7px dashed #7cff00;
+  box-shadow: 12px 12px 0 #111;
+}
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff700;
+  background: #111;
+  border: 5px solid #00ffff;
+  padding: 8px;
+  transform: rotate(-3deg);
+}
+nav { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+nav a {
+  padding: 8px 10px;
+  background: #00ffff;
+  border: 4px dotted #ff0000;
+  color: #111;
+  font-weight: bold;
+  box-shadow: 4px 4px 0 #7cff00;
+}
+nav a:hover { background: #fff; transform: rotate(4deg) scale(1.08); }
+.menu-botao { display: none; background: #111; border: 4px solid #fff700; cursor: pointer; padding: 5px; }
+.menu-botao img { display: block; width: 30px; height: 30px; }
+.botao {
+  display: inline-block;
+  padding: 11px 16px;
+  color: #fff;
+  background: #ff0000;
+  border: 5px outset #ff8c00;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: bold;
+  box-shadow: 5px 5px 0 #111;
+}
+.botao:hover { background: #00b300; transform: translate(3px, 3px) rotate(-2deg); }
+.botao.secundario { background: #8000ff; }
+.pagina {
+  max-width: 1100px;
+  margin: 38px auto;
+  padding: 25px;
+  background: rgba(255,255,255,.94);
+  border: 8px ridge #ff6600;
+  box-shadow: 15px 15px 0 #111;
+}
+h1 {
+  color: #ff00aa;
+  margin-bottom: 25px;
+  font-size: clamp(32px, 6vw, 60px);
+  text-shadow: 4px 4px #00ffff, -3px -3px #fff700;
+  transform: rotate(-1deg);
+}
+h1 span { color: #00a000; font-size: .7em; }
+h2 { color: #001eff; text-decoration: underline wavy #ff0000; }
+.home { text-align: center; }
+.home p { font-size: 19px; }
+.faixa-alerta {
+  background: #111;
+  color: #fff700;
+  padding: 12px;
+  border: 5px solid #ff0000;
+  font-weight: bold;
+  animation: pisca 1s steps(2) infinite;
+}
+@keyframes pisca { 50% { background: #fff700; color: #ff0000; } }
+.integrantes {
+  background: #00ff66;
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 22px;
+  border: 9px double #ff00ff;
+  transform: rotate(2deg);
+  box-shadow: 8px 8px 0 #111;
+}
+.integrantes p { font-size: 24px; font-weight: bold; }
+.meme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 28px 0; }
+.meme {
+  padding: 18px 10px;
+  min-height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #ff4444;
+  border: 7px solid #111;
+  color: #fff;
+  font-size: 14px;
+  transform: rotate(-3deg);
+}
+.meme strong { display: block; color: #fff700; font-size: 20px; margin-top: 10px; }
+.meme-amarelo { background: #ff9900; transform: rotate(4deg); color: #111; }
+.meme-verde { background: #00a878; transform: rotate(-1deg); }
+.atalhos { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+.titulo-com-botao { display: flex; justify-content: space-between; align-items: center; gap: 15px; }
+.tabela-container { overflow-x: auto; background: #fff; border: 6px solid #001eff; }
+table { width: 100%; border-collapse: collapse; min-width: 650px; }
+th, td { padding: 13px; border: 3px solid #111; text-align: left; }
+th { color: #fff700; background: #ff00aa; font-size: 17px; }
+tr:nth-child(even) { background: #00ffff; }
+tr:nth-child(odd) { background: #fff700; }
+form { background: #111; color: #fff; padding: 25px; max-width: 800px; border: 8px groove #7cff00; }
+label { display: block; margin: 12px 0 6px; font-weight: bold; color: #fff700; }
+select, input { width: 100%; padding: 11px; border: 5px solid #ff00aa; background: #fff700; font-size: 16px; font-family: inherit; }
+form .botao { margin-top: 22px; }
+.mensagem { padding: 14px; background: #7cff00; border: 5px dashed #111; font-weight: bold; }
+.carregando, .erro { max-width: 700px; margin: 80px auto; padding: 20px; text-align: center; background: #fff700; border: 8px dotted #ff0000; font-size: 22px; }
+.erro { color: #fff; background: #ff0000; }
+
+@media (max-width: 768px) {
+  header { align-items: center; flex-direction: row; flex-wrap: wrap; }
+  .menu-botao { display: block; }
+  nav { display: none; flex-direction: column; align-items: stretch; gap: 9px; width: 100%; }
+  nav.aberto { display: flex; }
+  nav a { text-align: center; }
+  .pagina { margin: 25px 12px; padding: 16px; box-shadow: 8px 8px 0 #111; }
+  .titulo-com-botao { align-items: flex-start; flex-direction: column; }
+  .meme-grid { grid-template-columns: 1fr; }
+  .meme { min-height: 95px; }
+  .atalhos { flex-direction: column; }
+  .atalhos .botao { width: 100%; }
+}

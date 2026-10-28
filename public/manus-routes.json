@@ -1,0 +1,10 @@
+{
+  "routes": [
+    { "path": "/", "title": "Home" },
+    { "path": "/pedidos", "title": "Listar pedidos" },
+    { "path": "/pedidos/novo", "title": "Criar pedido" },
+    { "path": "/categorias", "title": "Categorias" },
+    { "path": "/produtos", "title": "Produtos" },
+    { "path": "/clientes", "title": "Clientes" }
+  ]
+}
